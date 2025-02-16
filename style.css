@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image:url("image/totoro\ image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#todocontainer{
+  height: 500px;
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px white;
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+h1{
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Chewy", serif;
+}
