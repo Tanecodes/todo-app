@@ -5,29 +5,87 @@
 }
 body{
   display: flex;
+  gap: 15px;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-image:url("image/totoro\ image.png");
+  background-image:url("image/totoro image.png"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 #todocontainer{
-  height: 500px;
+  height: 300px;
   width: 500px;
   border-radius: 20px;
   box-shadow: 0px 0px 30px white;
-  backdrop-filter: blur(10px);
+  background-color: hsla(180, 100%, 50%, 0.20);
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   gap: 20px;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+}
+#todocontainer:hover{
+  transform: scale(1.05);
+  backdrop-filter: blur(10px);
 }
 h1{
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 50px;
   font-family: "Chewy", serif;
 }
+#inputcontainer{
+  display: flex;
+  flex-direction: column;
+}
+input::placeholder{
+  font-size: 18px;
+  font-style: italic;
+}
+#userinput{
+  width: 350px;
+  font-size: 25px;
+  font-style: italic;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  color: hsla(0, 0%, 0%, 0.70);
+  cursor: default;
+  transition: 0.2s ease-in-out;
+}
+#userinput:hover{
+  box-shadow: inset 0px 0px 10px grey;
+  transform: scale(1.07);
+}
+#userinput:focus{
+  box-shadow: inset 0px 0px 10px grey;
+  transform: scale(1.07);
+}
+#submitbutton{
+  font-size: 30px;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  padding: 10px 40px;
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  
+  color: white;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+#submitbutton:hover{
+  transform: scale(1.1);
+}
+#submitbutton:active{
+  box-shadow: 0px 0px 30px white;
+}
+
