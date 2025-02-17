@@ -5,7 +5,7 @@
 }
 body{
   display: flex;
-  gap: 15px;
+  gap: 50px;
   height: 100vh;
   justify-content: center;
   align-items: center;
@@ -69,7 +69,7 @@ input::placeholder{
   box-shadow: inset 0px 0px 10px grey;
   transform: scale(1.07);
 }
-#submitbutton{
+#addbutton{
   font-size: 30px;
   font-family: Arial,sans-serif;
   font-weight: bold;
@@ -82,10 +82,31 @@ input::placeholder{
   transition: 0.2s ease;
   cursor: pointer;
 }
-#submitbutton:hover{
+#addbutton:hover{
   transform: scale(1.1);
 }
-#submitbutton:active{
+#addbutton:active{
   box-shadow: 0px 0px 30px white;
 }
-
+#resultcontainer{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#todoresults{
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px white;
+  background-color: hsla(180, 100%, 50%, 0.20);
+  padding: 15px;
+  color: white;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+  width: fit-content;
+}
+#todoresults:hover{
+  transform: scale(1.5);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
