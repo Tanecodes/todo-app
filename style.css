@@ -5,14 +5,42 @@
 }
 body{
   display: flex;
+  flex-direction: column;
   gap: 50px;
   height: 100vh;
-  justify-content: center;
+  padding: 30px 20px;
   align-items: center;
   background-image:url("image/totoro image.png"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+header{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+}
+#background-button, #themes-button{
+  font-size: 23px;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px white;
+  background-color: hsla(180, 100%, 50%, 0.20);
+  color: white;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+#themes-button:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px white;
+}
+#background-button:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px white;
 }
 #todocontainer{
   height: 300px;
@@ -84,17 +112,21 @@ input::placeholder{
 #addbutton:active{
   box-shadow: 0px 0px 30px white;
 }
-
+#todoresults{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 5px;
+}
 #todoresults:empty{
   display: none;
-
 }
 .todoresults{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: fit-content;
   max-width: 250px;
   margin: 10px 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
   gap: 5px;
   border-radius: 20px;
   box-shadow: 0px 0px 30px white;
@@ -105,7 +137,6 @@ input::placeholder{
   backface-visibility: hidden;
   transform-origin: center center;
   transition: transform 0.3s ease;
-  width: fit-content;
 }
 .todoresults:hover{
   transform: scale(1.5);

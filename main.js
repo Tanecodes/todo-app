@@ -65,3 +65,13 @@ userInput.addEventListener("keydown",function(enter){
   }
 });
 
+const themesButton = document.getElementById("themes-button");
+const backgroundButton = document.getElementById("background-button");
+
+backgroundButton.addEventListener("click", function() {
+  
+});
+
+themesButton.addEventListener("click", function(){
+
+});
