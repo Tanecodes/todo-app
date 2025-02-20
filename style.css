@@ -1,50 +1,68 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  box-sizing: border-box; 
 }
-body{
+
+body {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  height: 100vh;
+  min-height: 100vh; 
   padding: 30px 20px;
   align-items: center;
-  background-image:url("image/totoro image.png"); 
+  background-image: url("image/totoro image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-x: hidden; 
 }
-header{
+
+header {
   width: 100%;
   display: flex;
   justify-content: end;
   gap: 30px;
 }
-#background-button, #themes-button{
+
+footer {
+  font-size: 20px;
+  margin-top: auto;
+  color: white;
+}
+
+a {
+  color: white;
+  transition: transform 1.3s;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#background-button, #themes-button {
   font-size: 23px;
-  font-family: Arial,sans-serif;
-  font-weight: bold;
   padding: 10px 40px;
   border: none;
   border-radius: 25px;
-  box-shadow: 0px 0px 10px white;
   background-color: hsla(180, 100%, 50%, 0.20);
   color: white;
   transition: 0.2s ease;
   cursor: pointer;
 }
-#themes-button:hover{
+
+#themes-button:hover, #background-button:hover {
   transform: scale(1.1);
   box-shadow: 0px 0px 30px white;
 }
-#background-button:hover{
-  transform: scale(1.1);
-  box-shadow: 0px 0px 30px white;
-}
-#todocontainer{
-  height: 300px;
-  width: 500px;
+
+#todocontainer {
+  width: 80%; 
+  max-width: 500px; 
+  height: auto; 
+  min-height: 300px; 
   border-radius: 20px;
   box-shadow: 0px 0px 30px white;
   background-color: hsla(180, 100%, 50%, 0.20);
@@ -56,26 +74,29 @@ header{
   gap: 20px;
   will-change: transform;
   backface-visibility: hidden;
-  transform-origin: center center;
   transition: transform 0.3s ease;
 }
-#todocontainer:hover{
+
+#todocontainer:hover {
   transform: scale(1.05);
   backdrop-filter: blur(10px);
 }
-h1{
+
+h1 {
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 50px;
   font-family: "Chewy", serif;
 }
 
-input::placeholder{
+input::placeholder {
   font-size: 18px;
   font-style: italic;
 }
-#userinput{
-  width: 350px;
+
+#userinput {
+  width: 100%; 
+  max-width: 350px;
   font-size: 25px;
   font-style: italic;
   border-radius: 10px;
@@ -86,17 +107,15 @@ input::placeholder{
   cursor: default;
   transition: 0.2s ease-in-out;
 }
-#userinput:hover{
+
+#userinput:hover, #userinput:focus {
   box-shadow: inset 0px 0px 10px grey;
   transform: scale(1.07);
 }
-#userinput:focus{
-  box-shadow: inset 0px 0px 10px grey;
-  transform: scale(1.07);
-}
-#addbutton{
+
+#addbutton {
   font-size: 30px;
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   padding: 10px 40px;
   border: 1px solid white;
@@ -106,21 +125,26 @@ input::placeholder{
   transition: 0.2s ease;
   cursor: pointer;
 }
-#addbutton:hover{
+
+#addbutton:hover {
   transform: scale(1.1);
 }
-#addbutton:active{
+
+#addbutton:active {
   box-shadow: 0px 0px 30px white;
 }
-#todoresults{
+
+#todoresults {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 5px;
 }
-#todoresults:empty{
+
+#todoresults:empty {
   display: none;
 }
-.todoresults{
+
+.todoresults {
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -135,17 +159,18 @@ input::placeholder{
   color: white;
   will-change: transform;
   backface-visibility: hidden;
-  transform-origin: center center;
   transition: transform 0.3s ease;
 }
-.todoresults:hover{
+
+.todoresults:hover {
   transform: scale(1.5);
   backdrop-filter: blur(10px);
 }
-.completebtn{
+
+.completebtn {
   align-self: flex-end;
   width: fit-content;
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 11px;
   border: none;
@@ -155,14 +180,48 @@ input::placeholder{
   transition: 0.2s ease;
   cursor: pointer;
   padding: 0px 10px;
-  transition: transform 0.3s ease;
 }
-.completebtn:hover{
+
+.completebtn:hover {
   transform: scale(1.1);
   border: 1px solid white;
-  
 }
-.completebtn:active{
+
+.completebtn:active {
   box-shadow: 0px 0px 5px white;
 }
 
+@media (max-width: 768px) {
+  #todocontainer {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  #userinput {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #todoresults {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+  
+  #todocontainer {
+    width: 95%;
+  }
+  
+  #userinput {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  #todoresults {
+    grid-template-columns: 1fr;
+  }
+}
