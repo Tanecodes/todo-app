@@ -44,10 +44,11 @@ a:hover {
 
 #background-button, #themes-button {
   font-size: 23px;
-  padding: 10px 40px;
-  border: none;
+  padding: 5px 35px;
+  box-shadow: 0px 0px 30px white;
+  border: 1px solid rgba(128, 128, 128, 0);
   border-radius: 25px;
-  background-color: hsla(180, 100%, 50%, 0.20);
+  background-color: hsla(167, 98%, 50%, 0.20);
   color: white;
   transition: 0.2s ease;
   cursor: pointer;
@@ -55,7 +56,7 @@ a:hover {
 
 #themes-button:hover, #background-button:hover {
   transform: scale(1.1);
-  box-shadow: 0px 0px 30px white;
+  border: 1px solid white;
 }
 
 #todocontainer {
@@ -117,7 +118,7 @@ input::placeholder {
   font-size: 25px;
   font-family: Arial, sans-serif;
   font-weight: bold;
-  padding: 10px 40px;
+  padding: 5px 40px;
   border: 1px solid white;
   border-radius: 25px;
   background-color: hsla(0, 0%, 100%, 0.2);

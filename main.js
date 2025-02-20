@@ -34,7 +34,7 @@ function bubble(bubbleText) {
 
   const completeBtn = document.createElement("button");
   completeBtn.classList.add("completebtn");
-  completeBtn.textContent = "complete"
+  completeBtn.textContent = "Done"
 
   completeBtn.addEventListener("click",function(){
     item.remove();
@@ -69,7 +69,7 @@ const themesButton = document.getElementById("themes-button");
 const backgroundButton = document.getElementById("background-button");
 
 backgroundButton.addEventListener("click", function() {
-  
+
 });
 
 themesButton.addEventListener("click", function(){
