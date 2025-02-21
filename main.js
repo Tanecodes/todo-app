@@ -67,20 +67,23 @@ userInput.addEventListener("keydown",function(enter){
 
 const themesButton = document.getElementById("themes-button");
 const backgroundButton = document.getElementById("background-button");
-let currentIndex = 0;
+
+//background button logic
+let currentIndex = parseInt(localStorage.getItem("backgroundIndex")) || 0;
+const backgrounds = [
+  "url(image/one-piece.jpeg)",
+  "url(image/totoro-image.png)",
+  "url(image/winter.png)",
+  "url(image/study.png)",
+  "url(image/cute-bunny.png)",
+  "url(image/clouds.webp)"
+];
+document.body.style.backgroundImage = backgrounds[currentIndex];
+
 backgroundButton.addEventListener("click", function() {
-
-  const backgrounds = [
-    "url(image/one-piece.jpeg)",
-    "url(image/totoro-image.png)",
-    "url(image/winter.png)",
-    "url(image/study.png)",
-    "url(image/cute-bunny.png)",
-    "url(image/clouds.webp)"
-  ]
-
-  document.body.style.backgroundImage = backgrounds[currentIndex];
   currentIndex = (currentIndex + 1) % backgrounds.length;
+  document.body.style.backgroundImage = backgrounds[currentIndex];
+  localStorage.setItem("backgroundIndex",currentIndex);
 });
 
 themesButton.addEventListener("click", function(){
