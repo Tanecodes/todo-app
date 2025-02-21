@@ -70,12 +70,11 @@ const backgroundButton = document.getElementById("background-button");
 let currentIndex = 0;
 backgroundButton.addEventListener("click", function() {
 
-  
-
   const backgrounds = [
     "url(image/one-piece.jpeg)",
     "url(image/totoro-image.png)",
-    "url(image/winter.png)"
+    "url(image/winter.png)",
+    "url(image/study.png)"
   ]
 
   document.body.style.backgroundImage = backgrounds[currentIndex];
