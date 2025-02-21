@@ -74,7 +74,9 @@ backgroundButton.addEventListener("click", function() {
     "url(image/one-piece.jpeg)",
     "url(image/totoro-image.png)",
     "url(image/winter.png)",
-    "url(image/study.png)"
+    "url(image/study.png)",
+    "url(image/cute-bunny.png)",
+    "url(image/clouds.webp)"
   ]
 
   document.body.style.backgroundImage = backgrounds[currentIndex];
