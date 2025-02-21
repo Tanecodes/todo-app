@@ -71,10 +71,10 @@ const backgroundButton = document.getElementById("background-button");
 //background button logic
 let currentIndex = parseInt(localStorage.getItem("backgroundIndex")) || 0;
 const backgrounds = [
-  "url(image/one-piece.jpeg)",
+  "url(image/study.png)",
   "url(image/totoro-image.png)",
   "url(image/winter.png)",
-  "url(image/study.png)",
+  "url(image/one-piece.jpeg)",
   "url(image/cute-bunny.png)",
   "url(image/clouds.webp)"
 ];
